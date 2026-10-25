@@ -75,5 +75,6 @@
     clang
     nodejs_26
     tree-sitter
+    taplo
   ];
 }

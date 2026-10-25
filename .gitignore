@@ -4,3 +4,4 @@
 !*/
 !*.nix
 !flake.lock
+!rebuild.nu
