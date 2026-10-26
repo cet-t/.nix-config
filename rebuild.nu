@@ -1,3 +1,3 @@
 def main [host: string] {
-    (sudo nixos-rebuild switch --flake $"($env.HOME)/.nix-config#($host)")
+    (sudo nixos-rebuild switch --flake $"(pwd)#($host)")
 }
