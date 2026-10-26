@@ -47,7 +47,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      discord
+      vivaldi
     ];
   };
 
@@ -67,6 +68,8 @@
     "nix-command"
     "flakes"
   ];
+
+  environment.localBinInPath = true;
 
   environment.systemPackages = with pkgs; [
     kdePackages.fcitx5-configtool
