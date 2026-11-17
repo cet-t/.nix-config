@@ -44,13 +44,22 @@
   users.users."cet" = {
     isNormalUser = true;
     description = "cet";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" ];
     packages = with pkgs; [
       kdePackages.kate
       discord
-      vivaldi
     ];
   };
+
+  programs.appimage = {
+      enable = true;
+      binfmt = true;
+  };
+
+  services.udev.extraRules = ''
+    KERNEL=="event*", SUBSYSTEM=="input", MODE="0660", GROUP="input"
+    KERNEL=="uinput", MODE="0660", GROUP="input", OPTIONS+="static_node=uinput"
+  '';
 
   programs.firefox.enable = true;
   nixpkgs.config.allowUnfree = true;
@@ -89,5 +98,6 @@
     nodejs_26
     tree-sitter
     taplo
+    floorp-bin
   ];
 }
