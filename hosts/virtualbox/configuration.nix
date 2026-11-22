@@ -48,6 +48,7 @@
     packages = with pkgs; [
       kdePackages.kate
       discord
+      claude-code
     ];
   };
 
