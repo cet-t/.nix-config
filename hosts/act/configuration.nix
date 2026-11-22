@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./packages.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -45,11 +46,6 @@
     isNormalUser = true;
     description = "cet";
     extraGroups = [ "networkmanager" "wheel" "input" ];
-    packages = with pkgs; [
-      kdePackages.kate
-      discord
-      claude-code
-    ];
   };
 
   programs.appimage = {
@@ -80,25 +76,4 @@
   ];
 
   environment.localBinInPath = true;
-
-  environment.systemPackages = with pkgs; [
-    kdePackages.fcitx5-configtool
-    vim
-    neovim
-    wget
-    git
-    rio
-    nushell
-    cargo
-    rustc
-    rustfmt
-    clippy
-    rust-analyzer
-    fzf
-    clang
-    nodejs_26
-    tree-sitter
-    taplo
-    floorp-bin
-  ];
 }
