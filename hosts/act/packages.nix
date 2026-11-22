@@ -28,5 +28,6 @@
     taplo
     floorp-bin
     herdr
+    fastfetch
   ];
 }
