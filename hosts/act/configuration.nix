@@ -49,6 +49,14 @@
   };
   services.printing.enable = true;
   services.openssh.enable = true;
+  services.cloudflared = {
+    enable = true;
+    tunnels."act" = {
+      credentialsFile = "/home/cet/.cloudflared/act.json";
+      default = "http_status:404";
+      ingress."ika.oyatsu.party".service = "http://localhost:3001";
+    };
+  };
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
