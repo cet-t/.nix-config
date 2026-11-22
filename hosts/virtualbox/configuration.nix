@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
-let dotfilesDir = "${config.home.homeDirectory}/dotfiles";
-
 {
-  # xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${dotfilesDir}/nvim";
-
   imports =
     [
       ./hardware-configuration.nix
