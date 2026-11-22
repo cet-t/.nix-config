@@ -12,6 +12,21 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
+  networking.networkmanager.ensureProfiles.profiles = {
+    "static-ip" = {
+      connection = {
+        id = "static-ip";
+        type = "ethernet";
+        interface-name = "enp2s0";
+      };
+      ipv4 = {
+        method = "manual";
+        address1 = "192.168.1.114/24,192.168.1.1";
+        dns = "1.1.1.1;1.0.0.1;";
+      };
+      ipv6.method = "auto";
+    };
+  };
   time.timeZone = "Asia/Tokyo";
   i18n.defaultLocale = "ja_JP.UTF-8";
   i18n.extraLocaleSettings = {
@@ -33,6 +48,7 @@
     variant = "";
   };
   services.printing.enable = true;
+  services.openssh.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
