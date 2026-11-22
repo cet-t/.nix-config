@@ -5,3 +5,5 @@
 !*.nix
 !flake.lock
 !rebuild.nu
+!rebuild-config.sh
+!reload-home-manager.sh
