@@ -16,11 +16,7 @@
     git
     rio
     nushell
-    cargo
-    rustc
-    rustfmt
-    clippy
-    rust-analyzer
+    rustup
     fzf
     clang
     nodejs_26
