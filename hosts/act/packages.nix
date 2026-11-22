@@ -5,6 +5,7 @@
     kdePackages.kate
     discord
     claude-code
+    cloudflared
   ];
 
   environment.systemPackages = with pkgs; [
