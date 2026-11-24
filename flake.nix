@@ -34,6 +34,7 @@
                 {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
+                    home-manager.backupFileExtension = "backup";
                     home-manager.users.cet = import ./hosts/act/home.nix;
                 }
             ];
