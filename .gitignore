@@ -2,6 +2,7 @@
 
 !.gitignore
 !*/
+!AGENTS.md
 !*.nix
 !flake.lock
 !rebuild.nu
