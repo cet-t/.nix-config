@@ -7,3 +7,5 @@
 !rebuild.nu
 !rebuild-config.sh
 !reload-home-manager.sh
+!pkgs/claude-code/manifest.json
+!pkgs/claude-code/update.sh

@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "antigravity-cli-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795507979,
+        "narHash": "sha256-rlaG98P+cG9CTEsDQ90Vi8AiRym1V+0x7NPiEtkEsaA=",
+        "owner": "xsen",
+        "repo": "antigravity-cli-nix",
+        "rev": "aa5547e1b390fc6e879388e724fb359a1df8e949",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xsen",
+        "repo": "antigravity-cli-nix",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -92,6 +112,7 @@
     },
     "root": {
       "inputs": {
+        "antigravity-cli-nix": "antigravity-cli-nix",
         "herdr-nix": "herdr-nix",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2"

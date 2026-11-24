@@ -15,13 +15,18 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         herdr-nix.url = "github:herdrdev/herdr-nix";
+        antigravity-cli-nix = {
+            url = "github:xsen/antigravity-cli-nix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { nixpkgs, home-manager, herdr-nix, ... }: {
+    outputs = { nixpkgs, home-manager, herdr-nix, antigravity-cli-nix, ... }: {
         nixosConfigurations.act = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {
                 herdr = herdr-nix.packages.x86_64-linux.default;
+                antigravity-cli = antigravity-cli-nix.packages.x86_64-linux.default;
             };
             modules = [
                 ./hosts/act/configuration.nix
