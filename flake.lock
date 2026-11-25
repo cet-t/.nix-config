@@ -115,7 +115,8 @@
         "antigravity-cli-nix": "antigravity-cli-nix",
         "herdr-nix": "herdr-nix",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "taskman": "taskman"
       }
     },
     "systems": {
@@ -130,6 +131,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "taskman": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795619777,
+        "narHash": "sha256-lj5nHbvhKzH215w0184s/M+0DwTB9iRnxpeRxFbx4Oo=",
+        "owner": "cet-t",
+        "repo": "taskman",
+        "rev": "4347653fc47999f1586c1807cbccb2c3aa95f8e8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cet-t",
+        "repo": "taskman",
         "type": "github"
       }
     }

@@ -1,4 +1,4 @@
-{ pkgs, lib, herdr, antigravity-cli, ... }:
+{ pkgs, lib, herdr, antigravity-cli, taskman, ... }:
 
 {
   # nixpkgs の claude-code は release ブランチだと数ヶ月遅れるので、
@@ -37,6 +37,7 @@
     floorp-bin
     herdr
     antigravity-cli
+    taskman
     fastfetch
     ripgrep
     prettier

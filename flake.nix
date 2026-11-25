@@ -19,14 +19,19 @@
             url = "github:xsen/antigravity-cli-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        taskman = {
+            url = "github:cet-t/taskman";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { nixpkgs, home-manager, herdr-nix, antigravity-cli-nix, ... }: {
+    outputs = { nixpkgs, home-manager, herdr-nix, antigravity-cli-nix, taskman, ... }: {
         nixosConfigurations.act = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             specialArgs = {
                 herdr = herdr-nix.packages.x86_64-linux.default;
                 antigravity-cli = antigravity-cli-nix.packages.x86_64-linux.default;
+                taskman = taskman.packages.x86_64-linux.default;
             };
             modules = [
                 ./hosts/act/configuration.nix
