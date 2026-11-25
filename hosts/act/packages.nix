@@ -17,6 +17,7 @@
     discord
     cloudflared
     claude-code
+    gh
   ];
 
   environment.systemPackages = with pkgs; [
@@ -38,5 +39,6 @@
     antigravity-cli
     fastfetch
     ripgrep
+    prettier
   ];
 }
